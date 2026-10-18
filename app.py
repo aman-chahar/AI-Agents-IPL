@@ -160,7 +160,7 @@ class GeminiQueryAgent:
     def __init__(self, api_key: str):
         self.api_key = api_key
         genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel('gemini-2.0-flash-lite')
+        self.model = genai.GenerativeModel('gemini-3.5-flash-lite')
         
     def generate_sql_query(self, user_query: str, schema: str) -> Tuple[str, str]:
         """Generate SQL query from natural language using Gemini"""
